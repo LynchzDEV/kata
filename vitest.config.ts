@@ -5,8 +5,11 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     ui: true,
+    include: ['katas/**/*.test.ts'],
     coverage: {
-      reporter: ['text', 'json', 'html']
+      reporter: ['text', 'json', 'html'],
+      include: ['katas/**/*.ts'],
+      exclude: ['katas/**/*.test.ts']
     }
   }
 })

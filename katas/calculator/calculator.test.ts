@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { Calculator, factorial } from '../src/calculator'
+import { Calculator, factorial } from './calculator'
 
 describe('Calculator', () => {
   const calc = new Calculator()

@@ -1,4 +1,4 @@
-import { Calculator, factorial } from './src/calculator'
+import { Calculator, factorial } from './katas/calculator/calculator'
 
 const calc = new Calculator()
 
