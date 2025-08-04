@@ -1,0 +1,19 @@
+{
+  "name": "kata",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@vitest/ui": "^3.2.4",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  }
+}
