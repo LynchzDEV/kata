@@ -5,18 +5,27 @@
   "private": true,
   "devDependencies": {
     "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "@vitest/ui": "^3.2.4",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
+    "prettier": "^3.6.2",
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "bun test",
     "test:ui": "vitest --ui",
-    "test:run": "vitest run",
-    "test:file": "vitest run --reporter=verbose",
-    "test:calculator": "vitest run katas/calculator/calculator.test.ts --reporter=verbose",
-    "test:string-utils": "vitest run katas/string-utils/string-utils.test.ts --reporter=verbose"
+    "test:run": "bun test",
+    "test:calculator": "bun test katas/calculator",
+    "test:string-utils": "bun test katas/string-utils",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   }
 }

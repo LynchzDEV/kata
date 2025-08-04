@@ -1,15 +1,15 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
     globals: true,
-    environment: 'node',
+    environment: "node",
     ui: true,
-    include: ['katas/**/*.test.ts'],
+    include: ["katas/**/*.test.ts"],
     coverage: {
-      reporter: ['text', 'json', 'html'],
-      include: ['katas/**/*.ts'],
-      exclude: ['katas/**/*.test.ts']
-    }
-  }
-})
+      reporter: ["text", "json", "html"],
+      include: ["katas/**/*.ts"],
+      exclude: ["katas/**/*.test.ts"],
+    },
+  },
+});

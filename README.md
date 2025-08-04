@@ -16,16 +16,19 @@ katas/
 ## Getting Started
 
 ### Install dependencies:
+
 ```bash
 bun install
 ```
 
 ### Run demo:
+
 ```bash
 bun run index.ts
 ```
 
 ### Run tests:
+
 ```bash
 # Run all tests
 bun test
@@ -40,11 +43,13 @@ bun test:run
 ## Creating a New Kata
 
 1. Create a new directory:
+
 ```bash
 mkdir katas/[kata-name]
 ```
 
 2. Create implementation file:
+
 ```typescript
 // katas/[kata-name]/[kata-name].ts
 export function myFunction() {
@@ -53,19 +58,21 @@ export function myFunction() {
 ```
 
 3. Create test file:
+
 ```typescript
 // katas/[kata-name]/[kata-name].test.ts
-import { describe, it, expect } from 'vitest'
-import { myFunction } from './[kata-name]'
+import { describe, it, expect } from "vitest";
+import { myFunction } from "./[kata-name]";
 
-describe('[kata-name]', () => {
-  it('should work', () => {
-    expect(myFunction()).toBe(true)
-  })
-})
+describe("[kata-name]", () => {
+  it("should work", () => {
+    expect(myFunction()).toBe(true);
+  });
+});
 ```
 
 4. Run tests to verify:
+
 ```bash
 bun test
 ```

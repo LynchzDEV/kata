@@ -3,7 +3,7 @@
 Default to using Bun instead of Node.js.
 
 - Use `bun <file>` instead of `node <file>` or `ts-node <file>`
-- Use `bun test` instead of `jest` or `vitest`
+- Use `bun run test` to run Vitest tests
 - Use `bun build <file.html|file.ts|file.css>` instead of `webpack` or `esbuild`
 - Use `bun install` instead of `npm install` or `yarn install` or `pnpm install`
 - Use `bun run <script>` instead of `npm run <script>` or `yarn run <script>` or `pnpm run <script>`
@@ -21,15 +21,25 @@ Default to using Bun instead of Node.js.
 
 ## Testing
 
-Use `bun test` to run tests.
+Use Vitest for testing. Run tests with `bun run test`.
 
-```ts#index.test.ts
-import { test, expect } from "bun:test";
+```ts#example.test.ts
+import { describe, it, expect } from "vitest";
 
-test("hello world", () => {
-  expect(1).toBe(1);
+describe("example test", () => {
+  it("should pass", () => {
+    expect(1).toBe(1);
+  });
 });
 ```
+
+Available test scripts:
+
+- `bun run test` - Run tests in watch mode
+- `bun run test:run` - Run tests once
+- `bun run test:ui` - Run tests with UI
+- `bun run test:calculator` - Run calculator tests only
+- `bun run test:string-utils` - Run string-utils tests only
 
 ## Frontend
 
